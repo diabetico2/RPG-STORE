@@ -1,0 +1,13 @@
+
+# Ignorar dependências do Node.js e Composer
+node_modules/
+vendor/
+
+# Arquivos de log
+*.log
+
+# Banco de dados local
+*.sqlite
+
+# Outras pastas temporárias ou desnecessárias
+dist/

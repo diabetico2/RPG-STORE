@@ -1,0 +1,97 @@
+/* Container principal */
+.main-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100%;
+  background: linear-gradient(to bottom right, #f4f6f8, #ffffff); /* Fundo degradê */
+  font-family: 'Roboto', Arial, sans-serif; /* Fonte moderna */
+  color: #333;
+}
+
+/* Cabeçalho com logo e botão de sair */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: #ffffff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.logo-container img {
+  max-width: 80px;
+  height: auto;
+  filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.1));
+}
+
+.logout-container {
+  display: flex;
+  align-items: center;
+}
+
+.logout-button {
+  background-color: #ff4d4d;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 25px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.logout-button:hover {
+  background-color: #e63946;
+}
+
+/* Menu */
+.menu-container {
+  display: flex;
+  flex-direction: column;
+  margin-top: 50px;
+  padding-left: 30px;
+}
+
+.menu-button {
+  background: #ffffff;
+  border: 2px solid #007bff;
+  border-radius: 25px;
+  padding: 15px 25px;
+  margin-bottom: 20px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #007bff;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: left;
+}
+
+.menu-button:hover {
+  background: #007bff;
+  color: white;
+}
+
+/* Ajuste responsivo */
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .logout-container {
+    margin-top: 10px;
+  }
+
+  .menu-container {
+    padding-left: 15px;
+  }
+
+  .menu-button {
+    font-size: 16px;
+    padding: 10px 20px;
+  }
+}

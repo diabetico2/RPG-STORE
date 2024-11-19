@@ -1,0 +1,41 @@
+<div class="stock-container">
+  <!-- Botão de Sair -->
+  <button class="logout-button" (click)="logout()">Sair</button>
+
+  <!-- Barra de pesquisa -->
+  <div class="search-container">
+    <input
+      type="text"
+      placeholder="Pesquisar no estoque..."
+      [(ngModel)]="searchTerm"
+      class="search-input"
+    />
+    <button (click)="onSearch()" class="search-button">
+      <i class="bi bi-search"></i>
+    </button>
+  </div>
+
+  <!-- Tabela -->
+  <div class="table-container">
+    <table class="stock-table">
+      <thead>
+        <tr>
+          <th>Nome</th>
+          <th>Linha</th>
+          <th>Quantidade</th>
+          <th>Tipo</th>
+          <th>ID</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let item of stock">
+          <td>{{ item.name }}</td>
+          <td>{{ item.line }}</td>
+          <td>{{ item.quantity }}</td>
+          <td>{{ item.type }}</td>
+          <td>{{ item.id }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
