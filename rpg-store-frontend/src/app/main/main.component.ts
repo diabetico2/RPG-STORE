@@ -1,13 +1,17 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-main',
-  standalone: true,
   templateUrl: './main.component.html',
-  styleUrls: ['./main.component.css']
+  styleUrls: ['./main.component.css'],
 })
 export class MainComponent {
+  constructor(private router: Router) {}
+
   logout() {
-    alert('Você clicou em sair!');
+    localStorage.removeItem('authToken');
+    console.log('Logout iniciado, redirecionando para login...');
+    this.router.navigate(['/login']);
   }
 }
