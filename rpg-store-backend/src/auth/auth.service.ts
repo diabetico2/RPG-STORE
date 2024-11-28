@@ -2,6 +2,7 @@ import { Injectable } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
 import { Repository } from 'typeorm';
 import { User } from './entities/user.entity';
+import { CreateUserDto } from './dto/create-user.dto';
 import * as bcrypt from 'bcrypt';
 
 @Injectable()
@@ -11,16 +12,19 @@ export class AuthService {
     private readonly userRepository: Repository<User>,
   ) {}
 
-  async validateUser(email: string, password: string): Promise<User | null> {
-    console.log(`Tentando autenticar o usuário com email: ${email}`); // Adicionado
-    const user = await this.userRepository.findOneBy({ email });
+  async register(createUserDto: CreateUserDto): Promise<User> {
+    const hashedPassword = await bcrypt.hash(createUserDto.password, 10);
+    const newUser = this.userRepository.create({
+      email: createUserDto.email,
+      password: hashedPassword,
+    });
+    return this.userRepository.save(newUser);
+  }
 
-    if (user) {
-      const isPasswordMatching = await bcrypt.compare(password, user.password);
-      console.log(`Senha correspondente: ${isPasswordMatching}`); // Adicionado
-      if (isPasswordMatching) {
-        return user;
-      }
+  async validateUser(email: string, password: string): Promise<User | null> {
+    const user = await this.userRepository.findOneBy({ email });
+    if (user && (await bcrypt.compare(password, user.password))) {
+      return user;
     }
     return null;
   }

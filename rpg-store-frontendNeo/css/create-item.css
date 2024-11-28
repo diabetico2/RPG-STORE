@@ -1,0 +1,115 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  width: 90%;
+  max-width: 500px;
+  background: white;
+  padding: 25px; /* Maior espaçamento interno */
+  border-radius: 10px;
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+h1 {
+  margin-bottom: 25px; /* Espaçamento maior para o título */
+  text-align: center;
+  color: #333;
+  font-size: 24px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+  color: #333;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 14px;
+  transition: box-shadow 0.3s ease;
+}
+
+/* Efeito ao focar nos campos */
+input:focus {
+  outline: none;
+  border-color: #007bff;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+button {
+  width: 100%;
+  padding: 10px; /* Mantém o botão confortável */
+  margin-top: 15px; /* Espaçamento acima */
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px; /* Mantém o texto legível */
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+  background-color: #0056b3;
+  transform: scale(1.02); /* Leve aumento no hover */
+}
+
+button:active {
+  background-color: #004085;
+  transform: scale(0.98); /* Reduz levemente ao clicar */
+}
+
+.back-button {
+  background-color: #6c757d;
+  font-size: 14px; /* Texto menor mas legível */
+  padding: 8px 15px; /* Botão menor */
+  width: auto;
+  display: inline-block;
+  text-align: center;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  margin-top: 15px; /* Mantém espaçamento uniforme */
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.back-button:hover {
+  background-color: #495057;
+  transform: scale(1.02); 
+}
+
+.back-button:active {
+  background-color: #343a40;
+  transform: scale(0.98); 
+}
+.back-button {
+  background-color: #6c757d;
+  width: 100%; 
+  margin-top: 15px;
+  padding: 10px;
+  font-size: 14px;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Visualizar Estoque</title>
+  <link rel="stylesheet" href="../css/view-stock.css">
+  <script src="../js/auth.js"></script>
+  <script>
+    protectRoute();
+  </script>
+</head>
+<body>
+  <div class="container">
+    <h1>Estoque</h1>
+    <table>
+      <thead>
+        <tr>
+          <th>Nome</th>
+          <th>Categoria</th>
+          <th>Quantidade</th>
+          <th>Tipo</th>
+          <th>Linha</th>
+        </tr>
+      </thead>
+      <tbody id="stockContainer">
+      </tbody>
+    </table>
+    <button onclick="window.location.href='main.html'" class="back-button">Voltar</button>
+  </div>
+  <script src="../js/view-stock.js"></script>
+</body>
+</html>

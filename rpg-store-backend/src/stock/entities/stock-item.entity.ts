@@ -6,7 +6,7 @@ export class StockItem {
   id: number;
 
   @Column()
-  name: string;
+  name: string; // Torne opcional se necessário: @Column({ nullable: true })
 
   @Column()
   category: string;
@@ -17,6 +17,6 @@ export class StockItem {
   @Column()
   type: string;
 
-  @Column({ nullable: true }) 
+  @Column({ nullable: true }) // Linha pode ser opcional
   line: string;
 }

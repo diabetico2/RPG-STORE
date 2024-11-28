@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Atualizar/Excluir Item</title>
+  <link rel="stylesheet" href="../css/update-delete.css">
+  <script src="../js/auth.js"></script>
+  <script>
+    protectRoute();
+  </script>
+</head>
+<body>
+  <div class="container">
+    <h1>Atualizar/Excluir Item</h1>
+    <table>
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Nome</th>
+          <th>Categoria</th>
+          <th>Quantidade</th>
+          <th>Tipo</th>
+          <th>Linha</th>
+          <th>Ações</th>
+        </tr>
+      </thead>
+      <tbody id="itemContainer">
+      </tbody>
+    </table>
+    <button onclick="window.location.href='main.html'" class="back-button">Voltar</button>
+  </div>
+  <script src="../js/update-delete.js"></script>
+</body>
+</html>
