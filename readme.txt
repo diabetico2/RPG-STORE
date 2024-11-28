@@ -47,11 +47,11 @@ Backend
 Acesse o diretório rpg-store-backend.
 Instale as dependências:
 bash
-Copiar código
+
 npm install
 Inicie o servidor:
 bash
-Copiar código
+
 npm run start
 O backend estará rodando em: http://localhost:3000.
 Frontend
@@ -64,7 +64,7 @@ Login: POST /auth/login
 Corpo da requisição:
 
 json
-Copiar código
+
 {
   "email": "usuario@example.com",
   "password": "12345"
@@ -75,7 +75,7 @@ Criar Item: POST /stock
 Corpo da requisição:
 
 json
-Copiar código
+
 {
   "name": "Espada Lendária",
   "category": "Armas",
@@ -87,7 +87,7 @@ Atualizar Item: PUT /stock/:id
 Corpo da requisição:
 
 json
-Copiar código
+
 {
   "name": "Novo Nome",
   "quantity": 10
